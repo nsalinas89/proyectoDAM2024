@@ -1,3 +1,4 @@
+import 'package:app_videojuegos/widgets/barra_busqueda.dart';
 import 'package:flutter/material.dart';
 
 class BuscarPage extends StatefulWidget {
@@ -25,9 +26,6 @@ class _BuscarPageState extends State<BuscarPage> {
                   end: Alignment.bottomCenter,
                   colors: [Colors.white, Colors.grey]),
             ),
-            child: Center(
-              child: Text(
-                  'Acá debe ir una barra de busqueda que permita filtrar los productos segun como se ingrese en tal y abajo mostrar los resultados que coincidan'),
-            )));
+            child: Center(child: BarraBusqueda())));
   }
 }
