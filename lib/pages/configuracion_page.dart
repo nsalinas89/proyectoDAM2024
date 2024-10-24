@@ -40,15 +40,6 @@ class _ConfiguracionPageState extends State<ConfiguracionPage> {
                 children: [
                   ListTile(
                     leading: Icon(
-                      MdiIcons.settingsHelper,
-                      color: Colors.grey,
-                    ),
-                    trailing: Icon(Icons.keyboard_arrow_right),
-                    title: Text('Archivos'),
-                    subtitle: Text('Carpetas y Archivos de proyectos'),
-                  ),
-                  ListTile(
-                    leading: Icon(
                       Icons.account_circle,
                       color: Colors.grey,
                     ),
@@ -73,6 +64,15 @@ class _ConfiguracionPageState extends State<ConfiguracionPage> {
                     trailing: Icon(Icons.keyboard_arrow_right),
                     title: Text('Notificaciones'),
                     subtitle: Text('Preferencias de notificaciones'),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      MdiIcons.history,
+                      color: Colors.grey,
+                    ),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    title: Text('Historial'),
+                    subtitle: Text('Compras realizadas'),
                   ),
                   ListTile(
                     leading: Icon(

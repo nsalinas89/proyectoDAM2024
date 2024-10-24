@@ -2,7 +2,7 @@
     <application
         android:label="app_videojuegos"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_joystick">
         <activity
             android:name=".MainActivity"
             android:exported="true"
