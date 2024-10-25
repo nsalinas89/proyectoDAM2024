@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'carrito_page.dart';
 
 class OfertasPage extends StatelessWidget {
   const OfertasPage({super.key});
@@ -6,22 +7,41 @@ class OfertasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('Ofertas',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-          backgroundColor: Colors.green,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'Ofertas',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        body: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Colors.white, Colors.grey]),
-            ),
-            child: Center(
-              child: Text('Acá irán los productos en oferta.'),
-            )));
+        backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.shopping_cart), // Icono de carrito
+            onPressed: () {
+              // Navega a la página del carrito
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CarritoPage()),
+              );
+            },
+          ),
+        ],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.white, Colors.grey],
+          ),
+        ),
+        child: Center(
+          child: Text('Acá irán los productos en oferta.'),
+        ),
+      ),
+    );
   }
 }
